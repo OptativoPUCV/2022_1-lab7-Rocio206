@@ -47,3 +47,17 @@ mi.,  4 de may. de 2022 21:20:23:
  tests:  3|2
 total_score: 25/70
 43efc27
+ju.,  5 de may. de 2022 17:47:07: 
+ heap.c | 11 +++++++----
+ 1 file changed, 7 insertions(+), 4 deletions(-)
+In file included from test.c:4:0:
+heap.c: In function 'heap_push':
+heap.c:39:37: error: 'p' undeclared (first use in this function)
+       heapElem aux1 = pq->heapArray[p];
+                                     ^
+heap.c:39:37: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:40:48: error: 'i' undeclared (first use in this function)
+       heapElem aux2 = pq->heapArray[pq->size + i];
+                                                ^
+Compilation failed
+866fd09
