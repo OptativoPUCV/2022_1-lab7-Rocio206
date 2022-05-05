@@ -38,8 +38,8 @@ void heap_push(Heap *pq, void *data, int priority)
    {
       heapElem aux1 = pq->heapArray[pos_np]; // padre
       heapElem aux2 = pq->heapArray[pos_nh]; // hijo
-      pq->heapArray[pos_np] = aux1;
-      pq->heapArray[pos_nh] = aux2;
+      pq->heapArray[pos_np] = aux2;
+      pq->heapArray[pos_nh] = aux1;
       pos_nh = pos_np;
       if (pos_nh <= 0)
          break;

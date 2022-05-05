@@ -67,3 +67,9 @@ ju.,  5 de may. de 2022 18:03:39:
  tests:  3|2
 total_score: 25/70
 e812b74
+ju.,  5 de may. de 2022 18:10:38: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  3|2
+total_score: 25/70
+1d26c16
