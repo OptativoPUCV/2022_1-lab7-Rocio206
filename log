@@ -61,3 +61,9 @@ heap.c:40:48: error: 'i' undeclared (first use in this function)
                                                 ^
 Compilation failed
 866fd09
+ju.,  5 de may. de 2022 18:03:39: 
+ heap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+ tests:  3|2
+total_score: 25/70
+e812b74

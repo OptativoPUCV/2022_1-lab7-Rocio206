@@ -36,10 +36,10 @@ void heap_push(Heap *pq, void *data, int priority)
    int pos_np = pq->size - 2 / 2, pos_nh = pq->size - 1;
    while (pq->heapArray[pos_np].priority < pq->heapArray[pos_nh].priority)
    {
-      heapElem aux1 = pq->heapArray[p];
-      heapElem aux2 = pq->heapArray[pq->size + i];
-      pq->heapArray[pq->size + i] = aux1;
-      pq->heapArray[pq->size + i + 1] = aux2;
+      heapElem aux1 = pq->heapArray[pos_np]; // padre
+      heapElem aux2 = pq->heapArray[pos_nh]; // hijo
+      pq->heapArray[pos_np] = aux1;
+      pq->heapArray[pos_nh] = aux2;
       pos_nh = pos_np;
       if (pos_nh <= 0)
          break;
