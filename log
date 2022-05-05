@@ -103,3 +103,9 @@ ju.,  5 de may. de 2022 18:52:07:
  tests:  5|2
 total_score: 35/70
 d17f5e8
+ju.,  5 de may. de 2022 19:01:11: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+total_score: 35/70
+ce5be1d
