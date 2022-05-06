@@ -147,3 +147,14 @@ heap.c:55:32: error: incompatible types when assigning to type 'heapElem {aka st
                                 ^
 Compilation failed
 05a9d72
+vi.,  6 de may. de 2022  9:01:30: 
+ heap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function 'heap_pop':
+heap.c:56:41: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+    pq->heapArray[pq->size - 1].priority = NULL;
+                                         ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+2f921ef
