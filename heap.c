@@ -65,7 +65,7 @@ void heap_pop(Heap *pq) // elimina la raiz
          heapElem aux1 = pq->heapArray[pos_np];     // padre
          heapElem aux2 = pq->heapArray[pos_nh + 1]; // hijo
          pq->heapArray[pos_np] = aux2;              // intercanbio
-         pq->heapArray[pos_nh] = aux1;
+         pq->heapArray[pos_nh + 1] = aux1;
          pos_np = pos_nh + 1;
          pos_nh = pos_np * 2;
       }
@@ -74,7 +74,7 @@ void heap_pop(Heap *pq) // elimina la raiz
          heapElem aux1 = pq->heapArray[pos_np];     // padre
          heapElem aux2 = pq->heapArray[pos_nh + 2]; // hijo
          pq->heapArray[pos_np] = aux2;              // intercanbio
-         pq->heapArray[pos_nh] = aux1;
+         pq->heapArray[pos_nh + 2] = aux1;
          pos_np = pos_nh + 2;
          pos_nh = pos_np * 2;
       }
