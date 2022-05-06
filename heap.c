@@ -49,8 +49,35 @@ void heap_push(Heap *pq, void *data, int priority)
    }
 }
 
-void heap_pop(Heap *pq)
+void heap_pop(Heap *pq) // elimina la raiz
 {
+   pq->heapArray[0] = pq->heapArray[pq->size - 1];
+   pq->heapArray[pq->size - 1] = NULL;
+   pq->size -= 1;
+
+   int pos_np = 0;
+   int pos_nh = pos_np * 2;
+   while (pq->heapArray[pos_np].priority < pq->heapArray[pos_nh + 1].priority || pq->heapArray[pos_np].priority < pq->heapArray[pos_nh + 2].priority)
+   {
+      if (pq->heapArray[pos_nh + 1].priority > pq->heapArray[pos_nh + 2].priority)
+      {
+         heapElem aux1 = pq->heapArray[pos_np];     // padre
+         heapElem aux2 = pq->heapArray[pos_nh + 1]; // hijo
+         pq->heapArray[pos_np] = aux2;              // intercanbio
+         pq->heapArray[pos_nh] = aux1;
+         pos_np = pos_nh + 1;
+         pos_nh = pos_np * 2;
+      }
+      else
+      {
+         heapElem aux1 = pq->heapArray[pos_np];     // padre
+         heapElem aux2 = pq->heapArray[pos_nh + 2]; // hijo
+         pq->heapArray[pos_np] = aux2;              // intercanbio
+         pq->heapArray[pos_nh] = aux1;
+         pos_np = pos_nh + 2;
+         pos_nh = pos_np * 2;
+      }
+   }
 }
 
 Heap *createHeap()
