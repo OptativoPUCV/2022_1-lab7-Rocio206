@@ -47,7 +47,7 @@ void heap_push(Heap *pq, void *data, int priority)
       pq->heapArray[pos_nh] = aux1;
 
       pos_nh = pos_np;
-      if (pos_nh <= 0)
+      if (pos_nh < 1)
          break;
       pos_np = (pos_nh - 1) / 2;
    }
