@@ -53,7 +53,7 @@ void heap_pop(Heap *pq) // elimina la raiz
 {
    pq->heapArray[0] = pq->heapArray[pq->size - 1];
    pq->heapArray[pq->size - 1].data = NULL;
-   pq->heapArray[pq->size - 1].priority = NULL;
+   pq->heapArray[pq->size - 1].priority = 0;
    pq->size -= 1;
 
    int pos_np = 0;
