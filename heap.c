@@ -27,7 +27,7 @@ void *heap_top(Heap *pq)
 
 void heap_push(Heap *pq, void *data, int priority)
 {
-   printf("prioridad : %d\n", priority);
+   printf("prioridad del dato: %d\n", priority);
    if (pq->capac == pq->size)
    {
       pq->heapArray = (heapElem *)realloc(pq->heapArray, pq->capac * 2 + 1);
@@ -69,7 +69,7 @@ void heap_pop(Heap *pq) // elimina la raiz
       {
          heapElem aux1 = pq->heapArray[pos_np];     // padre
          heapElem aux2 = pq->heapArray[pos_nh + 1]; // hijo
-         pq->heapArray[pos_np] = aux2;              // intercambio
+         pq->heapArray[pos_np] = aux2;              // intercanbio
          pq->heapArray[pos_nh + 1] = aux1;
          pos_np = pos_nh + 1;
          pos_nh = pos_np * 2;
@@ -78,7 +78,7 @@ void heap_pop(Heap *pq) // elimina la raiz
       {
          heapElem aux1 = pq->heapArray[pos_np];     // padre
          heapElem aux2 = pq->heapArray[pos_nh + 2]; // hijo
-         pq->heapArray[pos_np] = aux2;              // intercambio
+         pq->heapArray[pos_np] = aux2;              // intercanbio
          pq->heapArray[pos_nh + 2] = aux1;
          pos_np = pos_nh + 2;
          pos_nh = pos_np * 2;
